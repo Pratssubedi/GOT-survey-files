@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game of Thrones Survey form</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="el question">
+                    <div class="span7">
+                        <div>
+                            <label id="label_1" >1.Are Dragons reptiles?</label>
+                            
+                                                        
+                        </div>
+                    </div> 
+                   
+                        <div>
+                            <input type="radio" name="ReptileIndicator" id="ReptilesYes"
+                                 style="vertical-align: middle" class="Yes" value="10">
+                            <label style="vertical-align: middle">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="ReptileIndicator" id="ReptilesNo"
+                                 style="vertical-align: middle" class="No" value="0">
+                            <label style="vertical-align: middle">No</label>
+                        </div>
+                        </div>
+
+                    </div></br>
+                    <div class="el question">
+                    <div class="span7">
+                    	<div>
+                            <label id="label_1" >2. Is khaleesi queen?</label>
+                            
+                                                        
+                        </div>
+
+                     <div>
+                            <input type="radio" name="khaleesiIndicator" id="khaleesiYes"
+                                 style="vertical-align: middle" class="Yes" value="10">
+                            <label style="vertical-align: middle">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="khaleesiIndicator" id="khaleesiNo"
+                                 style="vertical-align: middle" class="No" value="0">
+                            <label style="vertical-align: middle">No</label>
+                            </div>
+                        </div></br>
+                        </div>
+
+
+                        <div>
+                            <label id="label_1" >3. Will Jon Snow be the next king?</label>
+                            
+                                                        
+                        </div>
+                        
+                         <div>
+                            <input type="radio" name="kingIndicator" id="kingYes"
+                                 style="vertical-align: middle" class="Yes" value="10">
+                            <label style="vertical-align: middle">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="kingIndicator" id="kingNo"
+                                 style="vertical-align: middle" class="No" value="0">
+                            <label style="vertical-align: middle">No</label>
+                        </div></br>
+                        
+                        <div>
+                            <label id="label_1" >4. Did Sansa kill Joffrey?</label>
+                            
+                                                        
+                        </div>
+                         <div>
+                            <input type="radio" name="JoffreyIndicator" id="JoffreyYes"
+                                 style="vertical-align: middle" class="Yes" value="10">
+                            <label style="vertical-align: middle">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="JoffreyIndicator" id="JoffreyNo"
+                                 style="vertical-align: middle" class="No" value="0">
+                            <label style="vertical-align: middle">No</label>
+                        </div>
+                        
+                </div></br>
+                <div>
+	                
+	                
+	                <input type="button" value="Add" id="Add_Button">
+	                
+	                
+                </div></br>
+
+                <div>
+                <label>Result:</label>
+                	<input type="text" name="Sum" id="Add_sum">
+                </div></br>
+
+                <div>
+                <label>No's of Yes:</label>
+                	<input type="text" id="Yes_sum">
+                </div></br>
+
+                <div>
+                <label>No's of No:</label>
+                	<input type="text"  id="No_sum">
+                </div>
+
+
+  <script type="text/javascript">
+
+  $(document).ready(function(){
+
+  	$('#Add_Button').click(function(){
+  		var add=0;
+  		$('input[type=radio]:checked').each(function(){
+  			add = add+ parseInt($(this).val());
+
+  		});
+
+  		$('#Add_sum').val(add);
+  		
+  	
+
+  var Yescount=0;	
+  var Nocount=0;
+
+  	$('.Yes').change(function(){
+  		
+  		if($('.Yes').is(':checked'))
+  		{
+  			Yescount= Yescount+1;
+  			$('#Yes_sum').val(Yescount);
+  		}
+
+  		 		
+  	});
+
+  	$('.No').change(function(){
+  		
+
+  		if($('.No').is(':checked'))
+  		{
+  			Nocount=Nocount+1;
+  			$('#No_sum').val(Nocount);
+  		}
+
+	
+
+  	});
+
+ }); 
+
+
+
+
+});  	
+  	
+
+
+
+  	
+
+  </script>              
+  		
+</body>
+</html>

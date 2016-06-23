@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Game of Thrones Fan Page</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ <link href="css/bootstrap.css" rel="stylesheet">
+ <link href="css/custom.css" rel="stylesheet">
+ 
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Modal.js"></script>
+  <script src="plugins/Terminal-typing-plugin/build/typewriting.min.js"></script> 
+
+ <style type="text/css">
+   h3{
+    text-align: center;
+   }
+
+ </style>
+    </head>
+    <body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav role="navigation">
+      <!-- start collapsed navbar -->
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navbar" aria-expanded="false" >View Navbar</button>
+        </div> 
+        <!-- collapsed navbar -->
+        <!-- start uncollapsed navbar -->
+        <div class="collapse navbar-collapse" id="main_navbar">
+          <UL class="nav nav-tabs">
+            <li> <a href="#"><span class="glyphicon glyphicon-home">&nbspHome</span></a></li>
+            <li> <a href="#"><span class="glyphicon glyphicon-user"> About Us </span></a></li>
+            <li> <a href="Gallery.html"><span class="glyphicon glyphicon-picture">&nbspPhotos</span></a></li>
+            <li> <a href="#"><span class="glyphicon glyphicon-envelope"> Contact Us</span></a></li>
+            
+           <!-- Modal Sign up -->
+          
+            <!-- Modal Sign up -->
+            <!-- inline form start -->
+          <form class="form-inline">
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputEmail3">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputPassword3">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+            </div>
+           
+            <button type="submit" class="btn btn-default">Sign in</button>
+
+          </div>
+        </form>
+
+
+
+          </UL>
+
+          <!-- Inline form end -->
+        </div>  
+        </div>
+
+      </nav>
+<div class="main-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="container-fluid">
+
+          <div class="col-sm-8 col-md-8 ">
+            <div class="thumbnail" id="thumb1">
+            <h3>Game of Thrones Survey</h3>
+              <img src=".\images\got.jpg" alt="..." class="img-circle">
+              <div class="caption">
+
+                <label id="label_1"> Procede to Survey?</label>
+                <div>
+                            <input type="radio" name="ParkingLotCurbedIndicator" id="ReptilesYes"
+                                 style="vertical-align: middle; margin: 0px;" class="required">
+                            <label for="ParkingLotCurbedIndicatorYes" style="vertical-align: middle; margin: 0px;">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="ParkingLotCurbedIndicator" id="ReptilesNo"
+                                 style="vertical-align: middle; margin: 0px;" class="required">
+                            <label for="ParkingLotCurbedIndicatorNo" style="vertical-align: middle; margin: 0px;">No</label>
+                        </div>
+                    <div>
+                  
+                  
+                  <input type="button" class="btn btn-success" value="Back" id="btnBack">
+                  <input type="button" class="btn btn-success" value="Next" id="btnNext">
+                  
+                </div>
+                        
+              </div>
+            </div>
+          </div></br>
+
+      
+
+      
+
+         
+          <div id="mycar" class="carousel slide col-sm-6 col-md-6" data-ride="carousel" >
+            
+            <ol class="carousel-indicators">
+                <li data-target="#mycar" data-slide-to="0" class="active"></li>
+                <li data-target="#mycar" data-slide-to="1"></li>
+                <li data-target="#mycar" data-slide-to="2"></li>
+            </ol>
+            
+            <div class="carousel-inner">
+                <div class="item active">
+                     <img src="images/crop4.jpg">
+                </div>
+                <div class="item">
+                    <img src="images/crop2.jpg">
+                </div>
+                <div class="item">
+                    <img src="images/crop3.jpg">
+                </div>
+                
+            </div>
+           
+            <a class="left carousel-control" href="#mycar" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span></a><a class="right carousel-control"
+                    href="#mycar" data-slide="next"><span class="glyphicon glyphicon-chevron-right">
+                    </span></a>
+
+                    </div>
+          
+                
+        
+    </div>
+    </div>
+</div>    
+
+ 
+
+     
+
+      <script>
+      $(document).ready(function(){
+        
+
+  $('#btn').click(function(){
+
+    if ($('#Multiline_Txt').val()=="Kodaline is the best band I can listen at this moment.") {
+      console.log($('#Multiline_Txt').val('okay , got it!'))
+    }
+    else {
+      alert("Wrong attempt");
+    }
+    //console.log($('#Multiline_Txt').val("this is a multiline textarea"));
+    
+  });
+
+var questions=["1. Are Dragons reptiles?", "2. Is khaleesi queen?","3. Will Jon Snow be the next king?", "4. Did Sansa kill Joffrey?","5. Is Ramsey a monster?"]
+    var counter=0;
+
+    $('#btnNext').click(function(){
+
+      if(counter<=questions.length-1){
+        $('#label_1').text(questions[counter]);
+        console.log(counter++);
+      }
+
+
+
+    });
+
+    $('#btnBack').click(function() {
+      if(counter > 0) {
+         console.log(counter--);
+        $('#label_1').text(questions[counter]);
+          
+      }
+
+        });
+
+});
+      </script>
+
+
+
+     
+
+    </body>
+    </html>
